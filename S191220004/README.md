@@ -2,11 +2,11 @@
 
 ### **Example的类图**
 
-![task1_class](C:\Users\10513\Desktop\task1_class.png)
+![image-20210929125750468](C:\Users\10513\AppData\Roaming\Typora\typora-user-images\image-20210929125750468.png)
 
 ### 对象时序图
 
-![task1_time](C:\Users\10513\Desktop\task1_time.png)
+![image-20210929125815173](C:\Users\10513\AppData\Roaming\Typora\typora-user-images\image-20210929125815173.png)
 
 ### 理解example的设计理念
 
@@ -24,7 +24,7 @@
 
 ### 类图
 
-![task2_class](C:\Users\10513\Desktop\task2_class.png)
+![image-20210929125831927](C:\Users\10513\AppData\Roaming\Typora\typora-user-images\image-20210929125831927.png)
 
 ### 可视化结果链接
 
@@ -38,7 +38,7 @@
 
 ### 类图
 
-![task3_class](C:\Users\10513\Desktop\task3_class.png)
+![image-20210929125902253](C:\Users\10513\AppData\Roaming\Typora\typora-user-images\image-20210929125902253.png)
 
 ### 可视化结果链接
 
