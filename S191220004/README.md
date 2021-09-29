@@ -46,4 +46,4 @@
 
 **选择排序：** https://asciinema.org/a/WPuhgT5cRG1tCEk8WYr64IyDg
 
-**快速排序：**https://asciinema.org/a/tLPpIyIl6WnQCqiDC5hllxvpK
+**快速排序：** https://asciinema.org/a/tLPpIyIl6WnQCqiDC5hllxvpK
