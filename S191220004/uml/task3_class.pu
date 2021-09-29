@@ -1,0 +1,110 @@
+@startuml
+interface Linable{
+    __ public __
+    + setPosition():void
+    + getPosition():Position
+    + getValue():int
+    + rank():int
+}
+
+class Matrix{
+    __ private __
+    - num:int
+    - positions: Position[]
+    __ public __
+    + Matrix()
+    + put(): void
+    + getByRank():int
+    + toString():String
+    + swapPosition():void
+    + toArray():Linable[]
+    + toString():String
+
+}
+
+class Position{
+    __ private __
+    - linable:Linable    
+    __ public __
+    + Position()
+    + setLinable():void 
+}
+
+class Monster{
+    __ public __
+    + Monster()
+    + rank()
+    + toString()
+    + setPosition()
+    + getPosition()
+    + getValue()
+    __ private __
+    - r:final int 
+    - g:final int
+    - b:final int
+    - position:Position
+    - rgbRandom:Random
+}
+
+class Snake{
+    __ private __
+    {static} - snake:Snake
+    - Snake()
+    - sorter:Sorter
+    - parsePlan():String[]
+    - execute():void
+    __ public __
+    {static} + getSanke():Snake
+    + setSorter():void
+    + lineUp():String
+}
+
+interface Sorter{
+    __ public __
+    + load():void
+    + sort():void
+    + getPlan():String
+}
+
+class SelectSorter{
+    __ public __
+    + load():void
+    + sort():void
+    + getPlan():String
+    + swap():void 
+    __ private __
+    - plan:String
+    - a:int []
+}
+
+class QuickSortor{
+    __ public __
+    + load():void
+    + sort():void
+    + getPlan():String
+    + swap():void 
+    __ private __
+    - plan:String
+    - a:int []
+    - partition():int
+}
+
+class RandomNum{
+    __ private __
+    - length:int
+    - visit:boolean[]
+    - random:Random
+    - count:int
+    __ public __
+    + RandomNum()
+    + uniqueNum():int
+}
+Matrix +-- Position:内部类
+Snake --> Matrix:关联
+Snake --> SelectSorter:关联
+Snake --> QuickSortor:关联
+Position <-right-> Monster:关联
+Linable <|.. Monster:实现
+Sorter <|.. SelectSorter:实现
+Sorter <|.. QuickSortor:实现
+@enduml

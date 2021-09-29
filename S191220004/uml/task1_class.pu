@@ -1,0 +1,90 @@
+@startuml
+
+interface Linable{
+    + setPosition():void
+    + getPosition():Position
+    + getValue():int
+}
+
+class Line{
+    __ private __
+    - positions: Position[]
+    __ public __
+    + Line():
+    + put(): void
+    + get():Linable
+    + toString():String
+    + toArray():Linable[]
+    + toString():String
+}
+
+class Position{
+    __ private __
+    - linable:Linable    
+    __ public __
+    + Position()
+    + setLinable():void 
+}
+
+enum Gourd{
+    __ public __
+    + ONE:Gourd
+    + TWO:Gourd
+    + THREE:Gourd
+    + FOUR:Gourd
+    + FIVE:Gourd
+    + SIX:Gourd
+    + SEVEN:Gourd
+    + Gourd()
+    {static} + getGourdByRank():Gourd
+    + rank()
+    + toString()
+    + setPosition()
+    + getPosition()
+    + swapPosition()
+    + getValue()
+    __ private __
+    - r:final int 
+    - g:final int
+    - b:final int
+    - position:Position
+}
+
+class Geezer{
+    __ private __
+    {static} - theGeezer:Geezer
+    - Geezer()
+    - sorter:Sorter
+    - parsePlan():String[]
+    - execute():void
+    __ public __
+    {static} + getTheGeezer():Geezer
+    + setSorter():void
+    + lineUp():String
+}
+
+interface Sorter{
+    __ public __
+    + load():void
+    + sort():void
+    + getPlan():String
+}
+
+class BubbleSorter{
+    __ public __
+    + load():void
+    + sort():void
+    + getPlan():String
+    + swap():void 
+    __ private __
+    - plan:String
+    - a:int []
+}
+
+Line +-left- Position:内部类
+Geezer --> Line:关联
+Geezer --> BubbleSorter:关联
+Position <-up-> Gourd:关联
+Linable <|.. Gourd:实现
+Sorter <|.. BubbleSorter:实现
+@enduml

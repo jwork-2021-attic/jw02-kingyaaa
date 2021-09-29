@@ -1,0 +1,20 @@
+@startuml
+actor Geezer
+actor Gourd
+participant Line
+participant BubbleSorter
+participant Sorter
+participant BufferedWriter
+Line --> Line:Line()
+Line --> Gourd:put()
+note right:Gourd传递七个葫芦娃的枚举变量
+Geezer --> Geezer:getTheGeezer()
+BubbleSorter --> Sorter:BubbleSorter()
+note right:实现Sorter
+Geezer --> BubbleSorter:setSorter()
+Geezer --> Line:lineUp()
+note left:得到排序结果的log
+BufferedWriter --> BufferedWriter:write()
+note left:将log写进txt文件
+BufferedWriter --> BufferedWriter:flush(),close()
+@enduml
